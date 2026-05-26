@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Situ Cipondoh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="header-section">
+            <h1>SITU CIPONDOH</h1>
+            <p>Wisata Danau Asri & Spot Nyaman untuk Healing di Kota Tangerang</p>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="sidebar-menu">
+                <ul>
+                    <li><a href="index.html" class="active">Beranda</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+
+            <div class="main-content">
+                <h2>Selamat Datang di Portal Situ Cipondoh</h2>
+                
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="Situ-Cipondoh.webp" alt="Situ Cipondoh">
+                        <div class="slide-text">Keindahan Pemandangan Danau Situ Cipondoh</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="SCM.webp" alt="Aula Situ Cipondoh" onerror="this.src='https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800'">
+                        <div class="slide-text">Daya Tarik Situ Cipondoh</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="scp.webp" alt="Wahana Air Situ Cipondoh" onerror="this.src='https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800'">
+                        <div class="slide-text">Fasilitas di Situ Cipondoh</div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <div style="text-align:center; margin-top: 10px; margin-bottom: 20px;">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                <p><strong>Situ Cipondoh</strong> merupakan salah satu destinasi wisata alam populer di Kota Tangerang yang menawarkan pemandangan danau luas dengan suasana tenang dan asri. Danau ini tidak hanya dimanfaatkan sebagai tempat rekreasi masyarakat, tetapi juga memiliki fungsi penting sebagai kawasan resapan air dan konservasi lingkungan di wilayah perkotaan. Karena lokasinya yang cukup strategis dan mudah dijangkau, Situ Cipondoh sering menjadi pilihan warga untuk berlibur bersama keluarga tanpa harus pergi jauh ke luar kota.</p>
+                
+                <p>Di kawasan wisata ini, pengunjung dapat melakukan berbagai aktivitas menarik seperti berjalan santai di sekitar danau, jogging, memancing, naik sepeda air, hingga menikmati pemandangan matahari terbenam. Banyak dari pengunjung juga datang untuk berfoto karena area danau memiliki panorama yang indah, terutama pada sore hari. Selain itu, terdapat area kuliner dan warung makan di sekitar lokasi yang menjual berbagai makanan dan minuman sehingga pengunjung dapat bersantai sambil menikmati suasana danau.</p>
+                    
+                <p>Fasilitas yang tersedia di Situ Cipondoh juga cukup lengkap, seperti area parkir, tempat duduk, taman bermain anak, aula serbaguna, serta jalur pedestrian untuk olahraga. Salah satu bangunan yang menarik perhatian adalah aula dengan desain yang disebut mirip dengan Sydney Opera House sehingga menjadi ikon tersendiri di kawasan tersebut. Tempat wisata ini cocok digunakan sebagai lokasi rekreasi murah karena pengunjung tidak dikenakan biaya tiket masuk dan hanya membayar biaya parkir kendaraan.</p>
+                
+                <p>Untuk akses menuju Situ Cipondoh yang cukup mudah, baik menggunakan kendaraan pribadi maupun transportasi umum seperti KRL, TransJakarta, bus, dan angkutan kota. Dengan suasana alam yang nyaman, biaya terjangkau, serta banyaknya aktivitas yang bisa dilakukan, Situ Cipondoh menjadi salah satu tempat wisata favorit masyarakat Tangerang dan sekitarnya untuk menghabiskan waktu libur atau sekadar melepas penat dari aktivitas sehari-hari.</p>
+                
+                <div class="info-box">
+                    <h4>Tips Berkunjung ke Situ Cipondoh</h4>
+                    <p>Agar kunjungan lebih nyaman, berikut beberapa tips yang bisa kamu ikuti:</p>
+                    <ul>
+                        <li> Bawa kantong sampah untuk menjaga kebersihan.</li>
+                        <li>Bawa uang tunai untuk keperluan transaksi.</li>
+                        <li>Bawa payung karena sebagian besar area bersifat outdoor.</li>
+                        <li>Antisipasi kemacetan di sekitar Jalan KH Hasyim Ashari.</li>
+                        <li>Pilih waktu kunjungan di hari kerja untuk menghindari keramaian.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <p>Copyright &copy; 2026 - Muhamad Nur Rizky.</p>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        let slideTimer;
+
+        showSlides(slideIndex);
+        bukaOtomatis();
+
+        // Fungsi Tombol Manual (Kiri/Kanan)
+        function plusSlides(n) {
+            clearInterval(slideTimer); // Hentikan auto sementara saat diklik manual
+            showSlides(slideIndex += n);
+            bukaOtomatis(); // Jalankan ulang timer auto
+        }
+
+        // Fungsi Klik Titik Indikator
+        function currentSlide(n) {
+            clearInterval(slideTimer);
+            showSlides(slideIndex = n);
+            bukaOtomatis();
+        }
+
+        // Fungsi Inti Penampil Gambar
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+
+        // Fungsi Automasi Berjalan setiap 4 Detik
+        function bukaOtomatis() {
+            slideTimer = setInterval(function() {
+                slideIndex++;
+                showSlides(slideIndex);
+            }, 4000); 
+        }
+    </script>
+
+</body>
+</html>
